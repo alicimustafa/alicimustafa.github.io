@@ -15,9 +15,22 @@
     background-color: #cccccc;
     border-radius: 5px;
     margin: 5px 10px 5px 10px;
+    font-family: monospace;
   }
   code {
     padding: 10px;
+  }
+  .comment-section {
+    color: #009900;
+  }
+  .lan-contruct {
+    color: #6600ff;
+  }
+  .strings {
+    color: #808080;
+  }
+  .number {
+    color: #ff9966;
   }
   </style>
 </head>
@@ -31,16 +44,16 @@
     allow you to control the order of the execution and whether to execute certain operations.
   </p>
   <p>
-    If/else has the following diagram. 
+    If/else has the following diagram.
   </p>
   <div class="code-section">
     <code>
-      &nbsp      if(statements) { <br>
-      &nbsp  &nbsp        // if section <br>
-      &nbsp  &nbsp        //one or more statements <br>
-      &nbsp      } else { <br>
-      &nbsp  &nbsp        // else section <br>
-      &nbsp  &nbsp        //one or more statements <br>
+      &nbsp<span class="lan-contruct">if</span>(statements) { <br>
+      &nbsp  &nbsp        <span class="comment-section">// if section</span> <br>
+      &nbsp  &nbsp        <span class="comment-section">//one or more statements</span> <br>
+      &nbsp      } <span class="lan-contruct">else</span> { <br>
+      &nbsp  &nbsp        <span class="comment-section">// else section</span> <br>
+      &nbsp  &nbsp        <span class="comment-section">//one or more statements</span> <br>
       &nbsp      } <br>
     </code>
   </div>
@@ -51,7 +64,7 @@
   </p>
   <div class="code-section">
     <code>
-    } else if(statement){ <br>
+    } <span class="lan-contruct">else if</span>(statement){ <br>
     </code>
   </div>
   <p>
@@ -59,13 +72,13 @@
   </p>
   <div class="code-section">
     <code>
-      &nbsp switch(value){ <br>
-      &nbsp &nbsp case compareValue: <br>
-      &nbsp &nbsp &nbsp      //one or more statements <br>
-      &nbsp &nbsp case compareValue: <br>
-      &nbsp &nbsp &nbsp      //one or more statements <br>
-      &nbsp &nbsp default : <br>
-      &nbsp &nbsp &nbsp      //one or more statements <br>
+      &nbsp<span class="lan-contruct">switch</span>(value){ <br>
+      &nbsp &nbsp <span class="lan-contruct">case</span> compareValue: <br>
+      &nbsp &nbsp &nbsp      <span class="comment-section">//one or more statements</span> <br>
+      &nbsp &nbsp <span class="lan-contruct">case</span> compareValue: <br>
+      &nbsp &nbsp &nbsp      <span class="comment-section">//one or more statements</span> <br>
+      &nbsp &nbsp <span class="lan-contruct">default</span> : <br>
+      &nbsp &nbsp &nbsp      <span class="comment-section">//one or more statements</span> <br>
       &nbsp } <br>
     </code>
   </div>
@@ -85,10 +98,10 @@
   </p>
   <div class="code-section">
     <code>
-      &nbsp If(time > 5) <br>
-      &nbsp &nbsp  System.out.print(“Closed”); <br>
+      &nbsp<span class="lan-contruct">If</span>(time > <span class="number">5</span>) <br>
+      &nbsp &nbsp  System.out.print(<span class="strings">“Closed”</span>); <br>
       &nbsp else <br>
-      &nbsp &nbsp  System.out.print(“Open”); <br>
+      &nbsp &nbsp  System.out.print(<span class="strings">“Open”</span>); <br>
     </code>
   </div>
   <p>
@@ -97,18 +110,18 @@
   </p>
   <div class="code-section">
     <code>
-      &nbsp switch(language){ <br>
-      &nbsp &nbsp  case “german”: <br>
-      &nbsp &nbsp &nbsp System.out.print(“Hallo Welt”); <br>
-      &nbsp &nbsp &nbsp break; <br>
-      &nbsp &nbsp  case “english”: <br>
-      &nbsp &nbsp &nbsp System.out.print(“Hello World”); <br>
-      &nbsp &nbsp &nbsp break; <br>
-      &nbsp &nbsp case “turkish”: <br>
-      &nbsp &nbsp &nbsp System.out.print(“Selam Dunya”); <br>
-      &nbsp &nbsp &nbsp break; <br>
-      &nbsp &nbsp default : <br>
-      &nbsp &nbsp &nbsp System.out.print(“sorry I don’t know that”) <br>
+      &nbsp<span class="lan-contruct">switch</span>(language){ <br>
+      &nbsp &nbsp  <span class="lan-contruct">case</span> <span class="strings">“german”</span>: <br>
+      &nbsp &nbsp &nbsp System.out.print(<span class="strings">“Hallo Welt”</span>); <br>
+      &nbsp &nbsp &nbsp <span class="lan-contruct">break</span>; <br>
+      &nbsp &nbsp  <span class="lan-contruct">case</span> <span class="strings">“english”</span>: <br>
+      &nbsp &nbsp &nbsp System.out.print(<span class="strings">“Hello World”</span>); <br>
+      &nbsp &nbsp &nbsp <span class="lan-contruct">break</span>; <br>
+      &nbsp &nbsp <span class="lan-contruct">case</span> <span class="strings">“turkish”</span>: <br>
+      &nbsp &nbsp &nbsp System.out.print(<span class="strings">“Selam Dunya”</span>); <br>
+      &nbsp &nbsp &nbsp <span class="lan-contruct">break</span>; <br>
+      &nbsp &nbsp <span class="lan-contruct">default</span> : <br>
+      &nbsp &nbsp &nbsp System.out.print(<span class="strings">“sorry I don’t know that”</span>) <br>
       &nbsp } <br>
     </code>
   </div>
@@ -124,10 +137,10 @@
   </p>
   <div class="code-section">
     <code>
-      &nbsp 10 == 10 // true <br>
-      &nbsp 1 == 3     // false <br>
-      &nbsp A == A    // true <br>
-      &nbsp A == a.   // false <br>
+      &nbsp<span class="number">10</span> == <span class="number">10</span> <span class="comment-section">// true</span> <br>
+      &nbsp <span class="number">1</span> == <span class="number">3</span>     <span class="comment-section">// false</span> <br>
+      &nbsp <span class="strings">"A"</span> == <span class="strings">"A"</span>    <span class="comment-section">// true</span> <br>
+      &nbsp <span class="strings">"A"</span> == <span class="strings">"a"</span>   <span class="comment-section">// false</span> <br>
     </code>
   </div>
   <p>
@@ -136,12 +149,12 @@
   </p>
   <div class="code-section">
     <code>
-      &nbsp String a = “hi” , b = “bye”, c = “hi”; <br>
+      &nbspString a = <span class="strings">“hi”</span> , b = <span class="strings">“bye”</span>, c = <span class="strings">“hi”</span>; <br>
       <br>
-      &nbsp a.equals(“hi”)       // true <br>
-      &nbsp a.equals(“bye”)    // false <br>
-      &nbsp a.equals(c)          // true <br>
-      &nbsp a.equals(b).         // false <br>
+      &nbsp a.equals(<span class="strings">“hi”</span>)       <span class="comment-section">// true</span> <br>
+      &nbsp a.equals(<span class="strings">“bye”</span>)    <span class="comment-section">// false</span> <br>
+      &nbsp a.equals(c)          <span class="comment-section">// true</span> <br>
+      &nbsp a.equals(b).         <span class="comment-section">// false</span> <br>
     </code>
   </div>
   <h2>Math object</h2>
@@ -161,15 +174,15 @@
   </p>
   <div class="code-section">
     <code>
-      &nbsp plusOneVoid(4); // displays 5 on screen <br>
-      &nbsp System.out.print(plusOneReturn(4)); // displays 5 on screen <br>
+      &nbspplusOneVoid(<span class="number">4</span>); <span class="comment-section">// displays 5 on screen</span> <br>
+      &nbsp System.out.print(plusOneReturn(<span class="number">4</span>)); <span class="comment-section">// displays 5 on screen</span> <br>
       <br>
       &nbsp public static void plusOneVoid(int a){ <br>
-      &nbsp &nbsp System.out.print(a + 1); <br>
+      &nbsp &nbsp System.out.print(a + <span class="number">1</span>); <br>
       &nbsp } <br>
       <br>
       &nbsp public static void plusOneReturn(int a){ <br>
-      &nbsp &nbsp return a + 1; <br>
+      &nbsp &nbsp return a + <span class="number">1</span>; <br>
       &nbsp } <br>
     </code>
   </div>
@@ -185,8 +198,8 @@
   </p>
   <div class="code-section">
     <code>
-      &nbsp (Int) 99.99 // 99 <br>
-      &nbsp (Int) 2.78   // 2 <br>
+      &nbsp(Int) <span class="number">99.99</span> <span class="comment-section">// 99</span> <br>
+      &nbsp (Int) <span class="number">2.78</span>   <span class="comment-section">// 2</span> <br>
     </code>
   </div>
   <p>
@@ -198,8 +211,8 @@
   </p>
   <div class="code-section">
     <code>
-      &nbsp (Int)(Math.random() * 6) //gives you a range between 0 and 5 <br>
-      &nbsp ((Int)(Math.random() * 10) + 1) // gives you range between 1 and 10 <br>
+      &nbsp(Int)(Math.random() * <span class="number">6</span>) <span class="comment-section">//gives you a range between 0 and 5</span> <br>
+      &nbsp ((Int)(Math.random() * <span class="number">10</span>) + <span class="number">1</span>) <span class="comment-section">// gives you range between 1 and 10</span> <br>
     </code>
   </div>
 </div>
